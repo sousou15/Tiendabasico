@@ -68,7 +68,7 @@ app.get('/productos', (req, res) => {
 app.post('/comprar', (req, res) => {
   const { productId, cantidad } = req.body;
 
-  const sql = 'INSERT INTO compras (product_id, cantidad) VALUES (?, ?)';
+  const sql = 'INSERT INTO compras (productId, cantidad) VALUES (?, ?)';
   const valores = [productId, cantidad];
 
   conexionMySQL.query(sql, valores, (err, resultado) => {
